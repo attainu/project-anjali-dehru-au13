@@ -7,59 +7,38 @@ if __name__ == "__main__":
     menu1()
     inputOption = input()
     if inputOption == "1":
-        f =open("input.txt","r")
-    
-    """
-        Counter = 0 
-  
-    #  Reading from input file 
-        Content = f.readline() 
-        CoList = Content.split("\n") 
-  
-         for line in Content: 
-             if line: 
-                 Counter += 1
-             else:
-                 continue
-         print(Counter)
-        """
-        for i in range(16):
-            time.sleep(1)
-            lines = f.readline()
-            if f.readline == None:
-                break
-            print (lines)
-            
-        #print(Counter)
-        f.close()
-        print("Output for the above inputs are : ")
-        print()
-        f = open("output.txt","r")
-        time.sleep(1)
-    
-    '''
-        Counter1 = 0
-  
-     # Reading from file 
-         Contents = f.readline() 
-         #CoList = Content.split("\n") 
-  
-         for line in Contents: 
-             if line: 
-                 Counter1 += 1
-             else:
-                 continue
-    '''
-    
-        for lines in range(20):
-            time.sleep(1) 
-            linesOfOutputFile =f.readline()
-            if f.readline == None:
-                break
-            print(linesOfOutputFile) 
+        inputFileName = input("Enter the file name for inputs: ")
+        try:
+            f =open(inputFileName,"r")
+            while(1):
+                time.sleep(1)
+                lines = f.readline()
+                if len(lines) == 0:
+                    break
+                print (lines)
+            print()
+            f.close()
+        except:
+            print("No such files exists")
 
-        f.close()
+        outputFileName = input("Enter the file name for ouput: ")
+        try:
+
+            print("Output for the above inputs are : ")
+            print()
+            f = open(outputFileName,"r")
+            time.sleep(1)
         
+            while(1):
+                linesOfOutputFile = f.readline()
+                if len(linesOfOutputFile) == 0:
+                    break
+                print(linesOfOutputFile) 
+
+            f.close()
+        except:
+            print("No such files exists") 
+
     elif inputOption == "2" :
         size = int(input("What is the size of your parking Space? "))
         parking_place = parkingLot.parkingSpace(size)  
