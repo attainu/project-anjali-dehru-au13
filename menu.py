@@ -1,7 +1,7 @@
-def menu2():
+def menu1():
         print("""
-                    Press 1 to use command line for io
-                    Press 2 to use a external file 
+                    Press 1 to input file 
+                    Press 2 to enter the commands manually 
 
                         """)
 def menu2():
