@@ -32,9 +32,6 @@ o two option will appear:
 
 5. In order to use file option you should have file with name input and output files in your
 root director
-Usage
-Note:- 
- Format to be followed for entering commands manually
 
  1.Enter the size of  parking lot
  
